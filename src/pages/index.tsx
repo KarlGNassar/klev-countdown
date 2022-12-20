@@ -1,7 +1,26 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
+  const [counter, setCounter] = useState(10);
+  const [showToast, setShowToast] = useState(false);
+
+  const resetCountDown = () => {
+    setCounter(10);
+    setShowToast(false);
+  };
+
+  useEffect(() => {
+    let countdownTimeout;
+
+    if (counter > 0) {
+      countdownTimeout = setTimeout(() => setCounter(counter - 1), 1000);
+    } else {
+      setShowToast(true);
+    }
+  }, [counter]);
+
   return (
     <>
       <Head>
@@ -13,7 +32,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        {showToast ? (
+          <>
+            <h1>happy new year</h1>
+            <button onClick={resetCountDown}>reset</button>
+          </>
+        ) : (
+          <h1>{counter}</h1>
+        )}
+      </main>
     </>
   );
 }
