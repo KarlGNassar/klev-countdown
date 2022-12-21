@@ -1,0 +1,17 @@
+.pageTransition {
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cloverIcon {
+  overflow: visible;
+  fill: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}

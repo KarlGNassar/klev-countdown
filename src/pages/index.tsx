@@ -1,13 +1,15 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import styles from "../styles/Home.module.scss";
 
+const COUNTDOWN_TIME = 10;
+
 export default function Home() {
-  const [counter, setCounter] = useState(10);
+  const [counter, setCounter] = useState(COUNTDOWN_TIME);
   const [showToast, setShowToast] = useState(false);
 
   const resetCountDown = () => {
-    setCounter(10);
+    setCounter(COUNTDOWN_TIME);
     setShowToast(false);
   };
 
@@ -33,14 +35,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {showToast ? (
-          <>
-            <h1>happy new year</h1>
-            <button onClick={resetCountDown}>reset</button>
-          </>
-        ) : (
-          <h1>{counter}</h1>
-        )}
+        <>
+          {showToast ? (
+            <>
+              <h1>happy new year</h1>
+              <button onClick={resetCountDown}>reset</button>
+            </>
+          ) : (
+            <h1>{counter}</h1>
+          )}
+        </>
       </main>
     </>
   );

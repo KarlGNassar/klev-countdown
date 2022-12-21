@@ -1,6 +1,24 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
+import { Fragment, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import FakeLoader from "../components/FakeLoader";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  return (
+    <>
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <FakeLoader setLoading={setLoading} />
+        ) : (
+          <Fragment key={router.route}>
+            <Component {...pageProps} />
+          </Fragment>
+        )}
+      </AnimatePresence>
+    </>
+  );
 }
