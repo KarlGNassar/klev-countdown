@@ -10,8 +10,10 @@ import FlipCountdown from "@rumess/react-flip-countdown";
 const currentDate = new Date();
 const COUNTDOWN_DURATION = 10;
 const ANIMATION_DURATION = 5;
-const COUNTDOWN = currentDate.setSeconds(
-  currentDate.getSeconds() + COUNTDOWN_DURATION + ANIMATION_DURATION
+const COUNTDOWN = new Date(
+  currentDate.setSeconds(
+    currentDate.getSeconds() + COUNTDOWN_DURATION + ANIMATION_DURATION
+  )
 );
 
 const Counter = () => {
@@ -76,7 +78,7 @@ const Counter = () => {
               hideDay
               hideHour
               hideMinute
-              endAt={COUNTDOWN} // Date/Time
+              endAt={COUNTDOWN.toISOString()} // Date/Time
               onTimeUp={() => setTimeEnd(true)}
               key={"countdown"}
             >
