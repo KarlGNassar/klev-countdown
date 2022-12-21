@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import FakeLoader from "../components/FakeLoader";
 import { useRouter } from "next/router";
 import CustomCursor from "../components/CustomCursor";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
@@ -12,6 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (
     <>
+      <Head>
+        <title>Klev Countdown 🍀</title>
+      </Head>
       <AnimatePresence mode="wait">
         {loading ? (
           <FakeLoader setLoading={setLoading} />
