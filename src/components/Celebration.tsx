@@ -13,14 +13,14 @@ const Celebration: React.FC<Props> = ({ audio }) => {
   useEffect(() => {
     setCursorType(true);
     if (audio) {
+      let popAudio = new Audio("/pop.mp3");
+      popAudio.volume = 0.5;
+      popAudio.play();
+
       let newYearAudio = new Audio("/new-year.mp3");
       newYearAudio.volume = 0.5;
       newYearAudio.loop = true;
       newYearAudio.play();
-
-      let popAudio = new Audio("/pop.mp3");
-      popAudio.volume = 0.5;
-      popAudio.play();
     }
   }, []);
 
