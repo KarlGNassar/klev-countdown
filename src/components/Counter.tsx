@@ -46,7 +46,7 @@ const Counter = () => {
                     animate={{ y: 0, skewY: 0 }}
                     transition={{ delay: 0.4, duration: 1.1 }}
                   >
-                    New Year's
+                    New Year&apos;s
                   </motion.h1>
                 </div>
                 <div className={styles.coundownHeaderContainer}>
