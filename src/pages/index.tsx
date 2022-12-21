@@ -12,7 +12,6 @@ export default function Home() {
           content="Countdown to celebrate the new year w/ Klev Agency"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <Counter />

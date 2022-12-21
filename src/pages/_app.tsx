@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Klev Countdown 🍀</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <AnimatePresence mode="wait">
         {loading ? (
