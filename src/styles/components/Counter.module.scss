@@ -1,0 +1,45 @@
+@import "../variables";
+
+.celebrationContainer {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  font-family: "Cinzel", serif;
+}
+.countdownContainerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.coundownHeaderContainer {
+  height: fit-content;
+  width: fit-content;
+  overflow: hidden;
+  font-family: "Cinzel", serif;
+}
+
+.countdownAudio {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.countdownHeader {
+  font-size: 5.2rem;
+
+  @media screen and (max-width: $screen-m) {
+    font-size: 2.8rem;
+  }
+}
