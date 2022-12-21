@@ -1,4 +1,4 @@
-import { AnimationProps, motion, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import React, { Dispatch, SetStateAction } from "react";
 import styles from "../styles/components/FakeLoader.module.scss";
 

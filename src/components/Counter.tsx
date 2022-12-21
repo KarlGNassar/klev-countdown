@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "../styles/components/Counter.module.scss";
 import { BiVolumeMute, BiVolumeFull } from "react-icons/bi";
 import Celebration from "./Celebration";

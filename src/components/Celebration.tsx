@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Confetti from "react-confetti";
 import { useCursorStore } from "../store/cursor";
 import styles from "../styles/components/Celebration.module.scss";

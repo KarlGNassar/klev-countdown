@@ -5,7 +5,6 @@ import { AnimatePresence } from "framer-motion";
 import FakeLoader from "../components/FakeLoader";
 import { useRouter } from "next/router";
 import CustomCursor from "../components/CustomCursor";
-import { useCursorStore } from "../store/cursor";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
