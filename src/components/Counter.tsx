@@ -4,13 +4,14 @@ import styles from "../styles/components/Counter.module.scss";
 import { BiVolumeMute, BiVolumeFull } from "react-icons/bi";
 import Celebration from "./Celebration";
 
+// package doesn't have type defs - ignore typescript
 //@ts-ignore
 import FlipCountdown from "@rumess/react-flip-countdown";
 
-const currentDate = new Date();
 const COUNTDOWN_DURATION = 10;
 const ANIMATION_DURATION = 5;
-const COUNTDOWN = new Date(
+const currentDate = new Date();
+const countdown = new Date(
   currentDate.setSeconds(
     currentDate.getSeconds() + COUNTDOWN_DURATION + ANIMATION_DURATION
   )
@@ -46,7 +47,7 @@ const Counter = () => {
                     className={styles.countdownHeader}
                     initial={{ y: 160, skewY: 4 }}
                     animate={{ y: 0, skewY: 0 }}
-                    transition={{ delay: 0.4, duration: 1.1 }}
+                    transition={{ delay: 0.2, duration: 1.1 }}
                   >
                     New Year&apos;s
                   </motion.h1>
@@ -56,7 +57,7 @@ const Counter = () => {
                     className={styles.countdownHeader}
                     initial={{ y: 160, skewY: 4 }}
                     animate={{ y: 0, skewY: 0 }}
-                    transition={{ delay: 0.5, duration: 1.1 }}
+                    transition={{ delay: 0.3, duration: 1.1 }}
                   >
                     Countdown 🥂
                   </motion.h1>
@@ -78,7 +79,7 @@ const Counter = () => {
               hideDay
               hideHour
               hideMinute
-              endAt={COUNTDOWN.toISOString()} // Date/Time
+              endAt={countdown.toISOString()} // Date/Time
               onTimeUp={() => setTimeEnd(true)}
               key={"countdown"}
             >

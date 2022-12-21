@@ -40,7 +40,7 @@ const FakeLoader: React.FC<Props> = ({ setLoading }) => {
           clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
 
           transition: {
-            delay: 2,
+            delay: 1.8,
             duration: 1,
             ease: [0.87, 0, 0.13, 1],
           },
