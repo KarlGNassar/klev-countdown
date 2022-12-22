@@ -9,7 +9,7 @@ import Celebration from "./Celebration";
 import FlipCountdown from "@rumess/react-flip-countdown";
 
 const COUNTDOWN_DURATION = 10;
-const ANIMATION_DURATION = 5;
+const ANIMATION_DURATION = 6;
 const currentDate = new Date();
 const countdown = new Date(
   currentDate.setSeconds(
