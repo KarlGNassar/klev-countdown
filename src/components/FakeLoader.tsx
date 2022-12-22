@@ -86,7 +86,7 @@ const FakeLoader: React.FC<Props> = ({ setLoading }) => {
             animate="visible"
             variants={cloverPathVariant}
             transition={{
-              delay: 0.25,
+              // delay: 0.25,
               duration: 3,
               ease: [1, 0, 0.8, 1],
             }}
@@ -98,7 +98,7 @@ const FakeLoader: React.FC<Props> = ({ setLoading }) => {
             animate="visible"
             variants={cloverPathVariant}
             transition={{
-              delay: 0.25,
+              // delay: 0.25,
               duration: 3,
               ease: [1, 0, 0.8, 1],
             }}
@@ -111,7 +111,7 @@ const FakeLoader: React.FC<Props> = ({ setLoading }) => {
             animate="visible"
             variants={cloverPathVariant}
             transition={{
-              delay: 0.25,
+              // delay: 0.25,
               duration: 3,
               ease: [1, 0, 0.8, 1],
             }}
@@ -124,7 +124,7 @@ const FakeLoader: React.FC<Props> = ({ setLoading }) => {
             animate="visible"
             variants={cloverPathVariant}
             transition={{
-              delay: 0.25,
+              // delay: 0.25,
               duration: 3,
               ease: [1, 0, 0.8, 1],
             }}
