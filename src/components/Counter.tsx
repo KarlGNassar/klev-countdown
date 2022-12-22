@@ -8,16 +8,12 @@ import Celebration from "./Celebration";
 //@ts-ignore
 import FlipCountdown from "@rumess/react-flip-countdown";
 
-const COUNTDOWN_DURATION = 10;
-const ANIMATION_DURATION = 6;
-const currentDate = new Date();
-const countdown = new Date(
-  currentDate.setSeconds(
-    currentDate.getSeconds() + COUNTDOWN_DURATION + ANIMATION_DURATION
-  )
-);
-
 const Counter = () => {
+  const COUNTDOWN_DURATION = 11;
+  const currentDate = new Date();
+  const countdown = new Date(
+    currentDate.setSeconds(currentDate.getSeconds() + COUNTDOWN_DURATION)
+  );
   const [timeEnd, setTimeEnd] = useState(false);
   const [audio, setAudio] = useState(false);
 
