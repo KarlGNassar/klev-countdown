@@ -1,3 +1,4 @@
+> Note: open browser console for Easter Egg 😉
 ## Description
 
 New Year countdown for [Klev](https://klevlb.com/) competition built with `Next`.
