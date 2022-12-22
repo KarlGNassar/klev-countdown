@@ -71,7 +71,7 @@ const Counter = () => {
             transition={{ duration: 0.6 }}
           >
             <FlipCountdown
-              size={"medium"}
+              size={"large"}
               titlePosition={"bottom"}
               secondTitle={" "}
               hideYear
