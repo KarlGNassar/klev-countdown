@@ -75,7 +75,7 @@ const Counter = () => {
               hideDay
               hideHour
               hideMinute
-              endAt={countdown.toISOString()} // Date/Time
+              endAt={countdown.toISOString()}
               onTimeUp={() => setTimeEnd(true)}
               key={"countdown"}
             >
